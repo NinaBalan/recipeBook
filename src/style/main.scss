@@ -1,0 +1,193 @@
+html {
+    font-size: 62.5%; // 1rem is 10px
+}
+/*
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Raleway';
+} */
+
+body {
+    overflow-x: hidden;
+    font-weight: normal;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+    margin-top: 3rem;
+    display: grid;
+    justify-items: center;
+}
+
+
+.sidebar {
+    height: 90%;
+    width: 350px;
+    border-right: 1px solid #eaeaea;
+    margin: 50px 0px;
+    padding-left: 30px;
+  }
+  .logo {
+    img {
+        width: 70%;
+        height: 50%;   
+    }
+  }
+  .sidebar__title {
+    color: #89EDA0;
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  .Navigation__list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    min-height: 100px;
+    justify-content: space-around;
+  }
+  .Navigation__button {
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.1s linear;
+  }
+  .Navigation__button:hover {
+    color: #89EDA0;
+  }
+  .Navigation__button--active {
+    text-decoration: underline;
+  }
+  
+  .Recipe {
+    margin: 60px 50px 0px 100px;
+    width: 70%;
+    font-family: "Raleway";
+  }
+  .Recipe__title {
+    margin: 0;
+    font-size: 6em;
+  }
+  .Recipe__sub-title {
+    font-size: 5em;
+    font-weight: bold;
+    margin-top: 50px;
+    text-transform: uppercase;
+  }
+  .Recipe__ingredients {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .Recipe__ingredients > li {
+    margin: 20px 0px;
+  }
+  .Recipe__steps {
+    padding-left: 20px;
+  }
+  .Recipe__steps > li {
+    margin: 20px 0px;
+}
+
+$color-main: #4791b3;
+$color-shadow: #eaeaea;
+$font-main: 'Lato', sans-serif;
+
+#root, body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.App {
+    display: flex;
+    height: 100%;
+}
+.Navigation {
+    /* &__nav {
+       
+     } */
+   
+   &__list {
+     display: flex;
+     flex-direction: column;
+     list-style-type: none;
+     min-height: 100px;
+     justify-content: space-around;
+   }
+   
+   &__button {
+     border: none;
+     font-size: 3em;
+     cursor: pointer;
+     transition: color .1s linear;
+   
+     &:hover {
+       color: $color-main;
+     }
+   
+     &--active {
+       text-decoration: underline;
+       color: #67849e ;
+     }
+   }
+}
+
+.Recipe {
+    margin: 60px 50px 0px 100px;
+    width: 70%;
+    font-family: $font-main;
+  
+    &__title {
+      margin: 0;
+      font-size: 6em;
+      color: #67849e;
+    }
+  
+    &__sub-title {
+      font-size: 3em;
+      font-weight: bold;
+      margin-top: 50px;
+      text-transform: uppercase;
+      color: #55cbd4;
+
+    }
+  
+    &__ingredients {
+      padding-left: 0;
+      list-style-type: none;
+      font-size: 2em;
+  
+      > li {
+        margin: 20px 0px;
+      }
+    }
+  
+    &__steps {
+      padding-left: 10px;
+  
+      > li {
+        margin: 20px 0px;
+        font-size: 2em;
+      }
+    }
+}
+.sidebar {
+    height: 100%;
+    width: 350px;
+    border-right: 2px solid $color-shadow;
+    margin: 50px 0px;
+    padding-left: 30px;
+    
+    &__title {
+      color: $color-main;
+      font-size: 7em;
+      margin: 0;
+    }
+}
